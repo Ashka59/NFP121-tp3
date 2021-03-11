@@ -25,4 +25,9 @@ public abstract class Observable {
         setObserverCount(brokers.size());
     }
 
+    public void notifyObs(){
+        for (Observer o: this.brokers) {
+            o.update();
+        }
+    }
 }

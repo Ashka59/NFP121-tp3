@@ -9,8 +9,6 @@ public class Cac40  extends Observable{
 
     public void setValue(int value) {
         this.value = value;
-        for (Broker broker : getBrokers()) {
-            broker.update();
-        }
+        super.notifyObs();
     }
 }
